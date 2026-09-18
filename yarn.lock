@@ -3120,6 +3120,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@my/config@workspace:packages/config"
   dependencies:
+    "@tamagui/animations-react-native": "npm:2.7.7"
     "@tamagui/animations-reanimated": "npm:2.7.7"
     "@tamagui/build": "npm:2.7.7"
     "@tamagui/font-inter": "npm:2.7.7"
