@@ -5,3 +5,5 @@ export const animationsApp = createAnimations({
   ...animationsMotion.animations,
   // ... your extra animations
 })
+
+export const animationDriver = '@tamagui/animations-motion'

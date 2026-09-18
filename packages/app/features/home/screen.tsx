@@ -1,6 +1,6 @@
 'use client'
 
-import { Button, H2, Paragraph, SizableText, XStack, YStack } from '@my/ui'
+import { animationDriver, Button, H2, Paragraph, SizableText, XStack, YStack } from '@my/ui'
 import { RotateCcw } from '@tamagui/lucide-icons'
 import { useState } from 'react'
 
@@ -13,10 +13,11 @@ export function HomeScreen() {
     <YStack flex={1} justify="center" items="center" gap="$6" p="$4" bg="$background">
       <YStack gap="$2" maxW={360}>
         <H2 text="center">Delayed enterStyle</H2>
+        <SizableText size="$5" fontWeight="600" text="center">
+          {animationDriver}
+        </SizableText>
         <Paragraph color="$color10" text="center">
-          Each row should stay hidden for its delay, then fade and slide in. With the
-          reanimated driver, delayed rows show immediately, vanish when their delay ends,
-          then animate in.
+          Each row should stay hidden for its delay, then fade and slide in.
         </Paragraph>
       </YStack>
 
