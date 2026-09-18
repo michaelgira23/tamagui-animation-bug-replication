@@ -23,9 +23,12 @@ Scan the QR code with Expo Go (SDK 57). `--go` is needed because the starter inc
 
 ## Recordings
 
-iOS 27 simulator, Expo Go 57, tapping Replay:
+iOS 27 simulator, Expo Go 57, tapping Replay. All three side by side: [media/comparison.mp4](media/comparison.mp4).
 
 | Driver | Recording |
 |---|---|
 | `@tamagui/animations-react-native` (for comparison, on the [`react-native-driver`](../../tree/react-native-driver) branch) | [media/react-native-driver.mp4](media/react-native-driver.mp4): delayed rows stay hidden until their delay ends |
-| `@tamagui/animations-reanimated` | [media/reanimated-driver.mp4](media/reanimated-driver.mp4): delayed rows show immediately, vanish when their delay ends, then fade in |
+| `@tamagui/animations-reanimated` 2.7.7 | [media/reanimated-driver.mp4](media/reanimated-driver.mp4): delayed rows show immediately, vanish when their delay ends, then fade in |
+| `@tamagui/animations-reanimated` with the fix | [media/reanimated-driver-fixed.mp4](media/reanimated-driver-fixed.mp4): delayed rows stay hidden until their delay ends |
+
+The fixed driver was built from [michaelgira23/tamagui@animation-fix](https://github.com/michaelgira23/tamagui/tree/animation-fix), which applies `withDelay` before the `enterStyle` seed in `applyAnimation`.
