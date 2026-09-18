@@ -1,7 +1,3 @@
-import { createAnimations } from '@tamagui/animations-react-native'
-import { animationsReactNative } from '@tamagui/config/v5-rn'
+import { animationsReanimated } from '@tamagui/config/v5-reanimated'
 
-export const animationsApp = createAnimations({
-  ...animationsReactNative.animations,
-  // ... your extra animations
-})
+export const animationsApp = animationsReanimated
