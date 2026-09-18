@@ -5451,19 +5451,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/helpers-icon@npm:2.0.0-rc.26":
-  version: 2.0.0-rc.26
-  resolution: "@tamagui/helpers-icon@npm:2.0.0-rc.26"
-  dependencies:
-    "@tamagui/core": "npm:2.0.0-rc.26"
-    "@tamagui/sizable-context": "npm:2.0.0-rc.26"
-  peerDependencies:
-    react: ">=19"
-    react-native-svg: ">=12"
-  checksum: 10/e2332162ffc814fca8b4fad4d155a9c57c459afc4530cc29f3e31bf64b766795eb2eade1dd932bac6ce1a6f55565f1ed07d02b5ba742a723516243029918c646
-  languageName: node
-  linkType: hard
-
 "@tamagui/helpers-node@npm:2.7.7":
   version: 2.7.7
   resolution: "@tamagui/helpers-node@npm:2.7.7"
@@ -5587,19 +5574,6 @@ __metadata:
   peerDependencies:
     react: ">=19"
   checksum: 10/cdb8a96508bcc43aa7efc7039c340e242a2bb105cbba76a76bf05491a9b4b24e4e2756ef67f8d6e6381652f87a3c1f32db5ac07a72d9ce419c292845d78427a6
-  languageName: node
-  linkType: hard
-
-"@tamagui/lucide-icons@npm:2.0.0-rc.26":
-  version: 2.0.0-rc.26
-  resolution: "@tamagui/lucide-icons@npm:2.0.0-rc.26"
-  dependencies:
-    "@tamagui/core": "npm:2.0.0-rc.26"
-    "@tamagui/helpers-icon": "npm:2.0.0-rc.26"
-  peerDependencies:
-    react: ">=19"
-    react-native-svg: ">=12"
-  checksum: 10/5aac31aa4fd6a772842c4312ac27d9ab238831ad94cde5784bd6936866d1be02d0d5b17c47e141f0eecc77af9a14353df7db4d46e75d147024ecb22a8a320e78
   languageName: node
   linkType: hard
 
@@ -6022,17 +5996,6 @@ __metadata:
   version: 2.7.7
   resolution: "@tamagui/simple-hash@npm:2.7.7"
   checksum: 10/d1bda565ee868217b773296c7ad16e963ca7b745d5747713f44ff1dd70874e95db17a8bf421cbf1f06db171cbe94bcbf53d2f7a82fa777f286d2c70d8f6c9602
-  languageName: node
-  linkType: hard
-
-"@tamagui/sizable-context@npm:2.0.0-rc.26":
-  version: 2.0.0-rc.26
-  resolution: "@tamagui/sizable-context@npm:2.0.0-rc.26"
-  dependencies:
-    "@tamagui/core": "npm:2.0.0-rc.26"
-  peerDependencies:
-    react: ">=19"
-  checksum: 10/ac56afecc64caa59657943df080b27bb6e7b7e39ea913aa5eceae0c7785cfa3f0b84237b43dcd0cd356e32e3d0a0c70364b0c71d119c0fc707383c824644febb
   languageName: node
   linkType: hard
 
@@ -7379,7 +7342,6 @@ __metadata:
     "@tamagui/animations-react-native": "npm:2.7.7"
     "@tamagui/colors": "npm:2.7.7"
     "@tamagui/font-inter": "npm:2.7.7"
-    "@tamagui/lucide-icons": "npm:2.0.0-rc.26"
     "@tamagui/shorthands": "npm:2.7.7"
     "@tamagui/themes": "npm:2.7.7"
     "@types/react": "npm:~19.0.10"
