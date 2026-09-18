@@ -1,9 +1,7 @@
 import { HomeScreen } from 'app/features/home/screen'
-import { Stack, useRouter } from 'expo-router'
+import { Stack } from 'expo-router'
 
 export default function Screen() {
-  const router = useRouter()
-
   return (
     <>
       <Stack.Screen
@@ -11,7 +9,7 @@ export default function Screen() {
           title: 'Home',
         }}
       />
-      <HomeScreen onLinkPress={() => router.push('/user/nate')} />
+      <HomeScreen />
     </>
   )
 }
