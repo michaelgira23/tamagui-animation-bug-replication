@@ -1,7 +1,6 @@
 'use client'
 
 import { animationDriver, Button, H2, Paragraph, SizableText, XStack, YStack } from '@my/ui'
-import { RotateCcw } from '@tamagui/lucide-icons'
 import { useState } from 'react'
 
 const delays = [0, 1000, 2000, 3000]
@@ -40,7 +39,7 @@ export function HomeScreen() {
         ))}
       </YStack>
 
-      <Button icon={RotateCcw} onPress={() => setMountKey((key) => key + 1)}>
+      <Button onPress={() => setMountKey((key) => key + 1)}>
         Replay
       </Button>
     </YStack>

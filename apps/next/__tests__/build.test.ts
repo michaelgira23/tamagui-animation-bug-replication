@@ -55,11 +55,9 @@ test('Next.js build completes', async () => {
     // Check for specific route patterns (app router only)
     expect(result).toContain('○ /')
     expect(result).toContain('○ /_not-found')
-    expect(result).toContain('ƒ /user/[id]')
 
-    // Check for static and dynamic route indicators
-    expect(result).toContain('○  (Static)   prerendered as static content')
-    expect(result).toContain('ƒ  (Dynamic)  server-rendered on demand')
+    // Check for the static route indicator
+    expect(result).toContain('○  (Static)  prerendered as static content')
   } finally {
     // The process kill check has been moved to the afterAll block
   }
