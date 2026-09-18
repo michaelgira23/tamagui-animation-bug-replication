@@ -15,6 +15,7 @@ import {
 import { ChevronDown, ChevronUp } from '@tamagui/lucide-icons'
 import { useState } from 'react'
 import { Platform } from 'react-native'
+import { DelayedEnterRepro } from './delayed-enter-repro'
 
 export function HomeScreen({ onLinkPress }: { onLinkPress?: () => void }) {
 
@@ -58,6 +59,8 @@ export function HomeScreen({ onLinkPress }: { onLinkPress?: () => void }) {
         </Paragraph>
         <Separator />
       </YStack>
+
+      <DelayedEnterRepro />
 
       <Button onPress={onLinkPress}>Link to user</Button>
 
