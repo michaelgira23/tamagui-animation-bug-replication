@@ -5,3 +5,5 @@ export const animationsApp = createAnimations({
   ...animationsReactNative.animations,
   // ... your extra animations
 })
+
+export const animationDriver = '@tamagui/animations-react-native'
