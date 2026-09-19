@@ -27,10 +27,10 @@ iOS 27 simulator, Expo Go 57, tapping Replay. All three side by side: [media/com
 
 | Driver | Recording |
 |---|---|
-| `@tamagui/animations-react-native` (for comparison, on the [`react-native-driver`](../../tree/react-native-driver) branch) | [media/react-native-driver.mp4](media/react-native-driver.mp4): delayed rows stay hidden until their delay ends, but each delay runs twice as long (a separate bug, see below) |
+| `@tamagui/animations-react-native` (for comparison, on the [`react-native-driver`](../../tree/react-native-driver) branch) | [media/react-native-driver.mp4](media/react-native-driver.mp4): delayed rows stay hidden until their delay ends (delays are halved there so they line up with reanimated, see below) |
 | `@tamagui/animations-reanimated` 2.7.7 | [media/reanimated-driver.mp4](media/reanimated-driver.mp4): delayed rows show immediately, vanish when their delay ends, then fade in |
 | `@tamagui/animations-reanimated` with the fix (on the [`reanimated-driver-fixed`](../../tree/reanimated-driver-fixed) branch, as a `yarn patch`) | [media/reanimated-driver-fixed.mp4](media/reanimated-driver-fixed.mp4): delayed rows stay hidden until their delay ends |
 
 The fixed recording runs [michaelgira23/tamagui@animation-fix](https://github.com/michaelgira23/tamagui/tree/animation-fix), which applies `withDelay` before the `enterStyle` seed in `applyAnimation`, linked in with [`lllink`](https://github.com/tamagui/tamagui/blob/main/CONTRIBUTING.md). Metro also needs that checkout's `code/` in `watchFolders` to serve its font assets.
 
-The React Native driver's delays run twice as long because it wraps the spring in `Animated.sequence([Animated.delay(delay), spring])` while also passing `delay` in the spring's own config.
+The React Native driver's delays run twice as long because it wraps the spring in `Animated.sequence([Animated.delay(delay), spring])` while also passing `delay` in the spring's own config, so that branch passes half of each delay.
