@@ -35,7 +35,8 @@
     "@tamagui/core": "2.7.7",
     "@tamagui/web": "2.7.7",
     "tamagui": "2.7.7",
-    "@react-navigation/native": "7.1.28"
+    "@react-navigation/native": "7.1.28",
+    "@tamagui/animations-reanimated@npm:2.7.7": "patch:@tamagui/animations-reanimated@npm%3A2.7.7#~/.yarn/patches/@tamagui-animations-reanimated-npm-2.7.7-17902715c2.patch"
   },
   "dependencies": {
     "@babel/runtime": "^7.24.6",

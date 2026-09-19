@@ -3120,7 +3120,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@my/config@workspace:packages/config"
   dependencies:
-    "@tamagui/animations-reanimated": "npm:2.7.7"
+    "@tamagui/animations-reanimated": "patch:@tamagui/animations-reanimated@npm%3A2.7.7#~/.yarn/patches/@tamagui-animations-reanimated-npm-2.7.7-17902715c2.patch"
     "@tamagui/build": "npm:2.7.7"
     "@tamagui/font-inter": "npm:2.7.7"
     "@tamagui/shorthands": "npm:2.7.7"
@@ -4842,6 +4842,21 @@ __metadata:
     react: ">=19"
     react-native-reanimated: ">=3.0.0"
   checksum: 10/cde7bc44b87d34b8fa37544b4c61af4654d210b103c9444d354d6776aa29fa67eff4d480e0afb01573f42549f04e36eda7d6b4737a14126f857071e86a8ffdb2
+  languageName: node
+  linkType: hard
+
+"@tamagui/animations-reanimated@patch:@tamagui/animations-reanimated@npm%3A2.7.7#~/.yarn/patches/@tamagui-animations-reanimated-npm-2.7.7-17902715c2.patch":
+  version: 2.7.7
+  resolution: "@tamagui/animations-reanimated@patch:@tamagui/animations-reanimated@npm%3A2.7.7#~/.yarn/patches/@tamagui-animations-reanimated-npm-2.7.7-17902715c2.patch::version=2.7.7&hash=9f5926"
+  dependencies:
+    "@react-native/normalize-colors": "npm:0.83.2"
+    "@tamagui/animation-helpers": "npm:2.7.7"
+    "@tamagui/core": "npm:2.7.7"
+    "@tamagui/use-presence": "npm:2.7.7"
+  peerDependencies:
+    react: ">=19"
+    react-native-reanimated: ">=3.0.0"
+  checksum: 10/51216dc09fa8f629f413cb2032c1928426fe13172634c1fc9b239d633cfa76b1ac021209a6f2f290ee82daa570b9e74c77683b18f79c992a7439321252a96f6d
   languageName: node
   linkType: hard
 

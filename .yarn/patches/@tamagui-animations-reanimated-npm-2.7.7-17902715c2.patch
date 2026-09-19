@@ -1,0 +1,75 @@
+diff --git a/dist/esm/createAnimations.mjs b/dist/esm/createAnimations.mjs
+index 76a11ffbf92915c25b3fb1e31dd70067205b89d5..eec1720caefa5e8661fe31b63f0e5d4f7c608424 100644
+--- a/dist/esm/createAnimations.mjs
++++ b/dist/esm/createAnimations.mjs
+@@ -235,6 +235,10 @@ const applyAnimation = (targetValue, config, callback, seedValue, validateStartA
+   } else {
+     animatedValue = withSpring(targetValue, reanimatedConfig, callback);
+   }
++  if (delay && delay > 0) {
++    animatedValue = withDelay(delay, animatedValue);
++  }
++
+   if (seedValue !== void 0 || validateStartAsColor) {
+     const innerOnStart = animatedValue.onStart;
+     animatedValue.onStart = (animation, value, timestamp, previousAnimation) => {
+@@ -244,9 +248,6 @@ const applyAnimation = (targetValue, config, callback, seedValue, validateStartA
+       innerOnStart(animation, startValue, timestamp, previousAnimation);
+     };
+   }
+-  if (delay && delay > 0) {
+-    animatedValue = withDelay(delay, animatedValue);
+-  }
+   return animatedValue;
+ };
+ const animateSnapshotValue = (key, implicitKey, targetValue, config, previouslyEmitted, seedValue, gated, currentlyExiting, exitCycleId, currentlyCompletingAnimation, didAnimateCycleId, markExitKeyDone, markDidAnimateKeyDone, validateStartAsColor = false) => {
+diff --git a/dist/esm/createAnimations.native.js b/dist/esm/createAnimations.native.js
+index d8337591abb4270348ff6a79ee15e3b257490966..e0ff0f656b8b4b7ecd1864f12d46015cf4d0b07c 100644
+--- a/dist/esm/createAnimations.native.js
++++ b/dist/esm/createAnimations.native.js
+@@ -363,6 +363,10 @@ var applyAnimation = function (targetValue, config, callback, seedValue) {
+   } else {
+     animatedValue = withSpring(targetValue, reanimatedConfig, callback);
+   }
++  if (delay && delay > 0) {
++    animatedValue = withDelay(delay, animatedValue);
++  }
++
+   if (seedValue !== void 0 || validateStartAsColor) {
+     var innerOnStart = animatedValue.onStart;
+     animatedValue.onStart = function (animation, value, timestamp, previousAnimation) {
+@@ -372,9 +376,6 @@ var applyAnimation = function (targetValue, config, callback, seedValue) {
+       innerOnStart(animation, startValue, timestamp, previousAnimation);
+     };
+   }
+-  if (delay && delay > 0) {
+-    animatedValue = withDelay(delay, animatedValue);
+-  }
+   return animatedValue;
+ };
+ var animateSnapshotValue = function (key, implicitKey, targetValue, config, previouslyEmitted, seedValue, gated, currentlyExiting, exitCycleId, currentlyCompletingAnimation, didAnimateCycleId, markExitKeyDone, markDidAnimateKeyDone) {
+diff --git a/src/createAnimations.tsx b/src/createAnimations.tsx
+index 966b0dbd211ae940c949c84e62269c94533f490c..543912f547c7a52fed0a5257eff24cd1a395971d 100644
+--- a/src/createAnimations.tsx
++++ b/src/createAnimations.tsx
+@@ -418,6 +418,10 @@ const applyAnimation = (
+     )
+   }
+ 
++  if (delay && delay > 0) {
++    animatedValue = withDelay(delay, animatedValue)
++  }
++
+   // reanimated starts a descriptor from its per-view history for the key — the
+   // key's last output value, or the descriptor's own toValue when there is
+   // none (an instant snap). both are wrong for a key that turns animated with
+@@ -444,9 +448,6 @@ const applyAnimation = (
+     }
+   }
+ 
+-  if (delay && delay > 0) {
+-    animatedValue = withDelay(delay, animatedValue)
+-  }
+ 
+   return animatedValue
+ }
