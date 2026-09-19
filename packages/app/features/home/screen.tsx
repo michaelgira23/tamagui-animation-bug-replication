@@ -25,7 +25,8 @@ export function HomeScreen() {
           <XStack
             key={delay}
             enterStyle={{ opacity: 0, y: 20 }}
-            transition={['lazy', { delay }]}
+            // the react-native driver applies delay twice, so halve it to match reanimated's timing
+            transition={['lazy', { delay: delay / 2 }]}
             justify="space-between"
             items="center"
             px="$4"
