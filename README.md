@@ -23,7 +23,9 @@ Scan the QR code with Expo Go (SDK 57). `--go` is needed because the starter inc
 
 ## Recordings
 
-iOS 27 simulator, Expo Go 57, tapping Replay. All three side by side: [media/comparison.mp4](media/comparison.mp4).
+iOS 27 simulator, Expo Go 57, tapping Replay. All three side by side (click for the full-quality video):
+
+[![React Native driver, Reanimated 2.7.7 and Reanimated with the fix, side by side](media/comparison.gif)](media/comparison.mp4)
 
 | Driver | Recording |
 |---|---|
